@@ -1,0 +1,21 @@
+.contactList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 0;
+  margin: 15px;
+}
+
+.contactItem {
+  position: relative;
+  border: 1px solid;
+  padding: 5px 2px;
+}
+
+.deleteBtn {
+  position: absolute;
+  padding: 0;
+  right: 2px;
+  top: 3px;
+  background-color: rgb(220, 98, 98);
+}

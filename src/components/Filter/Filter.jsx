@@ -1,11 +1,22 @@
+import PropTypes from 'prop-types';
 import styles from './Filter.module.scss';
 
 const Filter = ({ value, changeFilter }) => {
   return (
-    <label>
+    <label className={styles.filterTitle}>
       Find contacts by name
-      <input onChange={changeFilter} type="text" value={value}></input>
+      <input
+        className={styles.filterInput}
+        onChange={changeFilter}
+        type="text"
+        value={value}
+      ></input>
     </label>
   );
 };
 export default Filter;
+
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChengeFilter: PropTypes.func,
+};

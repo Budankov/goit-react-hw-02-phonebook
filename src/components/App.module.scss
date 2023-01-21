@@ -1,0 +1,20 @@
+.container {
+  background-image: url('../iphone.png');
+  background-repeat: no-repeat;
+  background-size: 35%;
+  height: 900px;
+  background-position-x: center;
+  position: relative;
+}
+
+.contactBook {
+  position: absolute;
+  width: 300px;
+  top: 61%;
+  left: 50%;
+  transform: translate(-49%, -100%);
+}
+
+.title {
+  font-size: 30px;
+}

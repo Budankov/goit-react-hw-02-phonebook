@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from './ContactForm.module.scss';
 
 class ContactForm extends Component {
@@ -24,9 +25,9 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={styles.form} onSubmit={this.handleSubmit}>
         <label>
-          Name
+          <p>Name</p>
           <input
             value={this.state.name}
             onChange={this.handleChange}
@@ -38,7 +39,7 @@ class ContactForm extends Component {
           />
         </label>
         <label>
-          Number
+          <p>Number</p>
           <input
             value={this.state.number}
             onChange={this.handleChange}
@@ -49,9 +50,20 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <button type="submit">Add contact</button>
+        <button className={styles.submitBtn} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }
 }
 export default ContactForm;
+
+ContactForm.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+  handleChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  resetInput: PropTypes.func,
+  render: PropTypes.func,
+};
