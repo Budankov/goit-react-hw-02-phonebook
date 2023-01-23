@@ -8,6 +8,8 @@ class ContactForm extends Component {
     number: '',
   };
 
+  static propTypes = { onSubmit: PropTypes.func.isRequired };
+
   handleChange = e => {
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
@@ -58,12 +60,3 @@ class ContactForm extends Component {
   }
 }
 export default ContactForm;
-
-ContactForm.propTypes = {
-  name: PropTypes.string,
-  number: PropTypes.string,
-  handleChange: PropTypes.func,
-  handleSubmit: PropTypes.func,
-  resetInput: PropTypes.func,
-  render: PropTypes.func,
-};

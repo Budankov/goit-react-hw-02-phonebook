@@ -68,18 +68,3 @@ class App extends Component {
 }
 
 export default App;
-
-App.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ),
-  filter: PropTypes.string,
-  addContact: PropTypes.func,
-  deleteContact: PropTypes.func,
-  changeFilter: PropTypes.func,
-  getVisibleContact: PropTypes.func,
-};
