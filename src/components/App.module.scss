@@ -1,20 +1,30 @@
 .container {
-  background-image: url('./Images/iphone.png');
-  background-repeat: no-repeat;
-  background-size: 35%;
-  height: 900px;
-  background-position-x: center;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
+.containerBcg {
+  background-image: url('./Images/iphone.png'), url('./Images/bcg.jpeg');
+
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: 100%, 300%;
+  width: 400px;
+  height: 804px;
+  position: relative;
+}
 .contactBook {
   position: absolute;
-  width: 300px;
-  top: 61%;
-  left: 50%;
-  transform: translate(-49%, -100%);
+  width: 100%;
+  padding: 50px 36px 10px 36px;
 }
 
 .title {
   font-size: 30px;
+  color: white;
+}
+
+.subTitle {
+  color: white;
 }

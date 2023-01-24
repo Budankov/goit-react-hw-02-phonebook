@@ -1,21 +1,35 @@
+.contactListContaoner {
+  overflow: hidden;
+}
 .contactList {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
   padding: 0;
   margin: 15px;
+  color: white;
+  max-height: 360px;
+  overflow-x: scroll;
 }
 
 .contactItem {
   position: relative;
-  border: 1px solid;
+  border-bottom: 1px solid;
   padding: 5px 2px;
 }
 
 .deleteBtn {
   position: absolute;
-  padding: 0;
-  right: 2px;
-  top: 3px;
-  background-color: rgb(220, 98, 98);
+  top: 1px;
+  right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
 }
