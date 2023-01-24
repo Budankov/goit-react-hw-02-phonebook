@@ -61,6 +61,7 @@ class App extends Component {
   render() {
     const { filter } = this.state;
     const visibleContact = this.getVisibleContact();
+    const isContact = Boolean(visibleContact.length);
 
     return (
       <div className={styles.container}>
@@ -70,10 +71,15 @@ class App extends Component {
             <ContactForm onSubmit={this.addContact} />
             <h2 className={styles.subTitle}>Contacts</h2>
             <Filter value={filter} changeFilter={this.changeFilter} />
-            <ContactList
-              contact={visibleContact}
-              deleteContact={this.deleteContact}
-            />
+            {isContact && (
+              <ContactList
+                contact={visibleContact}
+                deleteContact={this.deleteContact}
+              />
+            )}
+            {!isContact && (
+              <p className={styles.noContact}>No contact in list</p>
+            )}
           </div>
         </div>
       </div>
